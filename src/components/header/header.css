@@ -1,0 +1,126 @@
+header{
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header_container {
+    text-align: center;
+    height: 100%;
+    padding: relative;
+}
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.header_socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    padding: 2rem;
+}
+
+.header_socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary);
+}
+
+.me {
+    background: rgb(45, 59, 45);
+    width: 21rem;
+    height: 27rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 0;
+    overflow: hidden;
+}
+
+.me:hover {
+    transform: scale(1.5);
+    background-color: rgb(138, 88, 88);
+    border-radius: 2rem;
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+.scroll_down {
+    position: absolute;
+    right: -0.5rem;
+    bottom: 7rem;
+    transform: rotate(90deg);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+   header {
+    height: 68vh;
+   } 
+}
+
+@media screen and (max-width: 600px) {
+    header {
+     height: 100vh;
+    } 
+
+    .header_socials,.scroll_down {
+        display: none;
+    }
+}
+ 
+
+.dynamic-txts {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+  
+.dynamic-txts li {
+    color: #135235;
+    list-style: none;
+    font-size: 50px;
+    font-weight: 300;
+    position: relative;
+    top: 0;
+    animation: slide2 6s steps(4) infinite;
+}
+  
+@keyframes slide2 {
+    100% {
+      top: -360px;
+    }
+  }
+  
+.dynamic-txts li span {
+    position: relative;
+  }
+  
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-bg);
+    animation: typing 1.5s steps(20) infinite;
+}
+  
+@keyframes typing {
+    100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+    }
+}
